@@ -45,6 +45,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_libdir}/xorg/modules/drivers/chips_drv.la
 %{_libdir}/xorg/modules/drivers/chips_drv.so
-%{_mandir}/man4/chips.4.bz2
+%{_mandir}/man4/chips.*
 
 
