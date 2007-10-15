@@ -1,6 +1,6 @@
 Name: x11-driver-video-chips
 Version: 1.1.1
-Release: %mkrel 4
+Release: %mkrel 5
 Summary: The X.org driver for Chips and Technologies
 Group: Development/X11
 URL: http://xorg.freedesktop.org
@@ -25,9 +25,7 @@ The X.org driver for Chips and Technologies boards
 %patch1 -p1 -b .chips-CT69000-noaccel
 
 %build
-%configure2_5x	--x-includes=%{_includedir}\
-		--x-libraries=%{_libdir}
-
+%configure
 %make
 
 %install
