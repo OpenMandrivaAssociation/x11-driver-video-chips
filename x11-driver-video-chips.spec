@@ -1,16 +1,25 @@
 Name: x11-driver-video-chips
 Version: 1.1.1
-Release: %mkrel 5
+Release: %mkrel 6
 Summary: The X.org driver for Chips and Technologies
 Group: Development/X11
-URL: http://xorg.freedesktop.org
-Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-chips-%{version}.tar.bz2
-# Default to SWcursor on CT65550 as hardware cursor is reported broken on this chip
-Patch0: x11-driver-video-chips-CT65550-swcursor.patch 
-# Disable 2D acceleration on C&T 69000 by default, since it is reported to be broken
-Patch1: x11-driver-video-chips-CT69000-noaccel.patch
+
+########################################################################
+# git clone git//git.mandriva.com/people/pcpa/xorg/drivers/xf86-video-chips  xorg/drivers/xf86-video-chips
+# cd xorg/drivers/xf86-video/chips
+# git-archive --format=tar --prefix=xf86-video-chips-1.1.1/ master | bzip2 -9 > xf86-video-chips-1.1.1.tar.bz2
+########################################################################
+Source0: xf86-video-chips-%{version}.tar.bz2
+
 License: MIT
 BuildRoot: %{_tmppath}/%{name}-root
+
+########################################################################
+# git-format-patch master..origin/mandriva+gpl
+Patch1: 0001-Update-for-new-policy-of-hidden-symbols-and-common-m.patch
+Patch2: 0002-Import-existing-patches-that-were-originally-Red-Ha.patch
+########################################################################
+
 BuildRequires: x11-proto-devel >= 1.0.0
 BuildRequires: x11-server-devel >= 1.0.1
 BuildRequires: x11-util-macros >= 1.0.1
@@ -21,10 +30,12 @@ The X.org driver for Chips and Technologies boards
 
 %prep
 %setup -q -n xf86-video-chips-%{version}
-%patch0 -p1 -b .chips-CT65550-swcursor 
-%patch1 -p1 -b .chips-CT69000-noaccel
+
+%patch1 -p1
+%patch2 -p1
 
 %build
+autoreconf -ifs
 %configure
 %make
 
