@@ -3,22 +3,21 @@ Version: 1.1.1
 Release: %mkrel 6
 Summary: The X.org driver for Chips and Technologies
 Group: Development/X11
-
+URL: http://xorg.freedesktop.org
+# Note local tag xf86-input-chips-1.1.1@mandriva suggested on upstream
+# Tag at git checkout d449ee092bbc8b4e08371b8067f1d8e320c4297e
 ########################################################################
 # git clone git//git.mandriva.com/people/pcpa/xorg/drivers/xf86-video-chips  xorg/drivers/xf86-video-chips
 # cd xorg/drivers/xf86-video/chips
-# git-archive --format=tar --prefix=xf86-video-chips-1.1.1/ master | bzip2 -9 > xf86-video-chips-1.1.1.tar.bz2
+# git-archive --format=tar --prefix=xf86-video-chips-1.1.1/ xf86-input-chips-1.1.1@mandriva | bzip2 -9 > xf86-video-chips-1.1.1.tar.bz2
 ########################################################################
 Source0: xf86-video-chips-%{version}.tar.bz2
-
 License: MIT
-
 ########################################################################
-# git-format-patch master..origin/mandriva+gpl
+# git-format-patch xf86-input-chips-1.1.1@mandriva..origin/mandriva+gpl
 Patch1: 0001-Update-for-new-policy-of-hidden-symbols-and-common-m.patch
 Patch2: 0002-Import-existing-patches-that-were-originally-Red-Ha.patch
 ########################################################################
-
 BuildRequires: x11-proto-devel >= 1.0.0
 BuildRequires: x11-server-devel >= 1.0.1
 BuildRequires: x11-util-macros >= 1.0.1
