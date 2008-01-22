@@ -1,8 +1,6 @@
-%define debug_package	%{nil}
-
 Name: x11-driver-video-chips
 Version: 1.1.1
-Release: %mkrel 6
+Release: %mkrel 7
 Summary: The X.org driver for Chips and Technologies
 Group: Development/X11
 URL: http://xorg.freedesktop.org
