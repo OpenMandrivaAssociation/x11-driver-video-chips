@@ -15,7 +15,7 @@ Conflicts: xorg-x11-server < 7.0
 Patch1: 0001-Import-existing-patches-that-were-originally-Red-Ha.patch
 
 %description
-The X.org driver for Chips and Technologies boards
+The X.org driver for Chips and Technologies boards.
 
 %prep
 %setup -q -n xf86-video-chips-%{version}
