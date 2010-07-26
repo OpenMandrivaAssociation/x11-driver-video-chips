@@ -1,5 +1,5 @@
 Name: x11-driver-video-chips
-Version: 1.2.2
+Version: 1.2.3
 Release: %mkrel 1
 Summary: X.org driver for Chips and Technologies
 Group: System/X11
