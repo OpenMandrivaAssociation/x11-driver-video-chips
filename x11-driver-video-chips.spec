@@ -1,11 +1,11 @@
 Name: x11-driver-video-chips
-Version: 1.2.4
-Release: 5
+Version: 1.2.5
+Release: 1
 Summary: X.org driver for Chips and Technologies
 Group: System/X11
 License: MIT
 URL: http://xorg.freedesktop.org
-Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-chips-%{version}.tar.bz2
+Source0: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-chips-%{version}.tar.bz2
 Patch1: 0001-Import-existing-patches-that-were-originally-Red-Ha.patch
 
 BuildRequires: x11-proto-devel >= 1.0.0
