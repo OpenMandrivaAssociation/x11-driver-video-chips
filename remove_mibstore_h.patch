@@ -1,0 +1,12 @@
+--- xf86-video-chips-1.2.5/src/ct_driver.c~	2012-07-16 03:35:59.000000000 +0000
++++ xf86-video-chips-1.2.5/src/ct_driver.c	2013-03-23 22:56:27.726581905 +0000
+@@ -96,9 +96,6 @@
+ /* All drivers initialising the SW cursor need this */
+ #include "mipointer.h"
+ 
+-/* All drivers implementing backing store need this */
+-#include "mibstore.h"
+-
+ /* All drivers using the mi banking wrapper need this */
+ #ifdef HAVE_ISA
+ #include "mibank.h"
