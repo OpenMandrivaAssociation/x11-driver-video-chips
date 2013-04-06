@@ -9,8 +9,8 @@ License:	MIT
 Url:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-chips-%{version}.tar.bz2
 Patch0:		remove_mibstore_h.patch
-#Patch1:		0001-Import-existing-patches-that-were-originally-Red-Ha.patch
-#Patch2:		x11-driver-video-chips-1.2.5-debian-iopl_h.patch
+Patch1:		0001-Import-existing-patches-that-were-originally-Red-Ha.patch
+Patch2:		x11-driver-video-chips-1.2.5-debian-iopl_h.patch
 
 BuildRequires:	pkgconfig(xorg-macros)
 BuildRequires:	pkgconfig(xorg-server)
