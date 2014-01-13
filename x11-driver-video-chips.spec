@@ -3,7 +3,7 @@
 Summary:	X.org driver for Chips and Technologies
 Name:		x11-driver-video-chips
 Version:	1.2.5
-Release:	5
+Release:	6
 Group:		System/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
