@@ -11,7 +11,7 @@ Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-chips
 Patch0:		remove_mibstore_h.patch
 Patch1:		0001-Import-existing-patches-that-were-originally-Red-Ha.patch
 Patch2:		x11-driver-video-chips-1.2.5-debian-iopl_h.patch
-
+Patch3:		U_Update-for-xserver-1.17.patch
 BuildRequires:	pkgconfig(xorg-macros)
 BuildRequires:	pkgconfig(xorg-server)
 BuildRequires:	pkgconfig(xproto)
@@ -25,7 +25,7 @@ x11-driver-video-chips is the X.org driver for Chips and Technologies boards.
 %apply_patches
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
