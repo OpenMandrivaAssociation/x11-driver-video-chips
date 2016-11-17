@@ -2,16 +2,14 @@
 
 Summary:	X.org driver for Chips and Technologies
 Name:		x11-driver-video-chips
-Version:	1.2.5
-Release:	16
+Version:	1.2.6.20161117
+Release:	1
 Group:		System/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-chips-%{version}.tar.bz2
-Patch0:		remove_mibstore_h.patch
 Patch1:		0001-Import-existing-patches-that-were-originally-Red-Ha.patch
 Patch2:		x11-driver-video-chips-1.2.5-debian-iopl_h.patch
-Patch3:		U_Update-for-xserver-1.17.patch
 BuildRequires:	pkgconfig(xorg-macros)
 BuildRequires:	pkgconfig(xorg-server)
 BuildRequires:	pkgconfig(xproto)
@@ -23,6 +21,7 @@ x11-driver-video-chips is the X.org driver for Chips and Technologies boards.
 %prep
 %setup -qn xf86-video-chips-%{version}
 %apply_patches
+[ -e autogen.sh ] && ./autogen.sh
 
 %build
 %configure
