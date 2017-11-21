@@ -2,7 +2,7 @@
 
 Summary:	X.org driver for Chips and Technologies
 Name:		x11-driver-video-chips
-Version:	1.2.6.20161117
+Version:	1.2.7
 Release:	1
 Group:		System/X11
 License:	MIT
