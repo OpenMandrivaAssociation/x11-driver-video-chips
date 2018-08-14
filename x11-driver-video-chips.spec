@@ -21,7 +21,6 @@ x11-driver-video-chips is the X.org driver for Chips and Technologies boards.
 %prep
 %setup -qn xf86-video-chips-%{version}
 %apply_patches
-[ -e autogen.sh ] && ./autogen.sh
 
 %build
 %configure
@@ -34,4 +33,3 @@ x11-driver-video-chips is the X.org driver for Chips and Technologies boards.
 %doc COPYING
 %{_libdir}/xorg/modules/drivers/chips_drv.so
 %{_mandir}/man4/chips.*
-
