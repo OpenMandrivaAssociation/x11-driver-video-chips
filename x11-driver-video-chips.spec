@@ -20,7 +20,7 @@ x11-driver-video-chips is the X.org driver for Chips and Technologies boards.
 
 %prep
 %setup -qn xf86-video-chips-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 %configure
