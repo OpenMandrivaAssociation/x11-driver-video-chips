@@ -14,6 +14,7 @@ Patch2:		x11-driver-video-chips-1.2.5-debian-iopl_h.patch
 BuildRequires:	pkgconfig(xorg-macros)
 BuildRequires:	pkgconfig(xorg-server)
 BuildRequires:	pkgconfig(xproto)
+BuildRequires:  x11-server-source
 Requires:	x11-server-common %(xserver-sdk-abi-requires videodrv)
 
 %description
