@@ -11,6 +11,11 @@ Url:		https://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-chips-%{version}.tar.xz
 Patch1:		0001-Import-existing-patches-that-were-originally-Red-Ha.patch
 Patch2:		x11-driver-video-chips-1.2.5-debian-iopl_h.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(xorg-macros)
 BuildRequires:	pkgconfig(xorg-server)
 BuildRequires:	pkgconfig(xproto)
